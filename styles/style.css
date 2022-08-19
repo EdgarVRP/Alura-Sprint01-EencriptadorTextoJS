@@ -3,7 +3,7 @@ header{
     padding: 20px 0;
 }
 .cajaHeader{
-    width: 940px;
+    width: 70%;
     position: relative;
     margin: 0 auto;
 }
@@ -13,7 +13,7 @@ h1{
     text-align: center;
 }
 main{
-    width: 940px;
+    width: 70%;
     margin: 0 auto;
     background-color: #FFFFFF;
     padding: 20px 0;
