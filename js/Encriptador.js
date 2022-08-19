@@ -125,6 +125,7 @@ BtnCopy.addEventListener("click", function () {
   navigator.clipboard.writeText(texto)
         .then(() => {
         console.log("Text copied to clipboard...")
+        alert("Texto copiado al portapapeles")
     })
         .catch(err => {
         console.log('Something went wrong', err);
