@@ -114,3 +114,19 @@ BtnDesencriptar.addEventListener("click", function () {
   console.log(resultado);
   document.getElementById("Resultado").value = resultado;
 });
+var BtnLimpiar = document.getElementById("limpiar");
+BtnLimpiar.addEventListener("click", function () {
+  document.getElementById("mensaje").value = "";
+  document.getElementById("Resultado").value = "";
+});
+var BtnCopy = document.getElementById("copy");
+BtnCopy.addEventListener("click", function () {
+  var texto = document.getElementById("Resultado").value;
+  navigator.clipboard.writeText(texto)
+        .then(() => {
+        console.log("Text copied to clipboard...")
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+});
