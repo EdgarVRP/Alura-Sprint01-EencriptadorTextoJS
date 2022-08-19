@@ -30,7 +30,6 @@ class Encriptador {
     var resultado = "";
     var longitud = texto.length;
     for (let i = 0; i < longitud; i++) {
-      debugger;
       switch (texto[i]) {
         case "a":
           if (texto[i] == "a" && texto[i + 1] == "i") {
@@ -101,3 +100,17 @@ class Encriptador {
     return resultado;
   }
 }
+var BtnEncriptar = document.getElementById("encriptar");
+BtnEncriptar.addEventListener("click", function () {
+  var texto = document.getElementById("mensaje").value;
+  var resultado = Encriptador.encriptar(texto);
+  console.log(resultado);
+  document.getElementById("Resultado").value = resultado;
+});
+var BtnDesencriptar = document.getElementById("desencriptar");
+BtnDesencriptar.addEventListener("click", function () {
+  var texto = document.getElementById("mensaje").value;
+  var resultado = Encriptador.desencriptar(texto);
+  console.log(resultado);
+  document.getElementById("Resultado").value = resultado;
+});
