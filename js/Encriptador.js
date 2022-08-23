@@ -103,6 +103,7 @@ class Encriptador {
 var BtnEncriptar = document.getElementById("encriptar");
 BtnEncriptar.addEventListener("click", function () {
   var texto = document.getElementById("mensaje").value;
+  texto=texto.toLowerCase();
   var resultado = Encriptador.encriptar(texto);
   console.log(resultado);
   document.getElementById("Resultado").value = resultado;
@@ -110,6 +111,7 @@ BtnEncriptar.addEventListener("click", function () {
 var BtnDesencriptar = document.getElementById("desencriptar");
 BtnDesencriptar.addEventListener("click", function () {
   var texto = document.getElementById("mensaje").value;
+  texto=texto.toLowerCase();
   var resultado = Encriptador.desencriptar(texto);
   console.log(resultado);
   document.getElementById("Resultado").value = resultado;
@@ -130,4 +132,9 @@ BtnCopy.addEventListener("click", function () {
         .catch(err => {
         console.log('Something went wrong', err);
     })
+});
+
+var mensaje = document.getElementById("mensaje");
+mensaje.addEventListener("click", function () {
+  document.getElementById("mensaje").value = "";
 });
